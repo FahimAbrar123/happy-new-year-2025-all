@@ -1,0 +1,119 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Main container to hold the video and content */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Video container in portrait format */
+.video-container {
+    width: 45%;
+    height: 80vh; /* Keeps the video height within view */
+    max-width: 600px;
+    max-height: 1067px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Video styling */
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Content styling (text, title, button) */
+.content {
+    width: 45%;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.content p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(90deg, #ff7eb3, #ff758c);
+    transform: scale(1.05);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-container, .content {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
